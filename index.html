@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Hawk - Cybersecurity Experts</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+
+    header {
+      background-color: #161b22;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px #000;
+    }
+
+    header h1 {
+      color: #58a6ff;
+      margin: 0;
+    }
+
+    .container {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .info-box {
+      background-color: #21262d;
+      border: 1px solid #30363d;
+      padding: 20px;
+      border-radius: 10px;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+    }
+
+    .info-box.show {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    button {
+      background-color: #238636;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2ea043;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Shadow Hawk</h1>
+    <p>Guardians of the Digital World</p>
+  </header>
+
+  <div class="container">
+    <h2>Who Are We?</h2>
+    <p>
+      Shadow Hawk is a pioneering cybersecurity company that empowers organizations to stay ahead of evolving cyber threats. With an elite team of ethical hackers, forensic analysts, and AI engineers, we deliver world-class protection and peace of mind.
+    </p>
+
+    <button onclick="toggleInfo()">Learn More</button>
+
+    <div class="info-box" id="moreInfo">
+      <h3>What We Do</h3>
+      <ul>
+        <li>🛡️ Advanced Threat Detection & Response</li>
+        <li>🔍 Digital Forensics & Incident Analysis</li>
+        <li>🤖 AI-Powered Intrusion Detection Systems</li>
+        <li>🧠 Cyber Threat Intelligence & Simulation</li>
+        <li>🌐 Cloud & Endpoint Security Solutions</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo() {
+      const box = document.getElementById("moreInfo");
+      box.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
